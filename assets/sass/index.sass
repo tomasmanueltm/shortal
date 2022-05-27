@@ -1,0 +1,127 @@
+@import "__"
+@import url("../icon/icons.css")
+
+
+root
+    --color1: #3c5063
+    --color2: #fa4a4d
+    --cor3: #ffc10e
+    --color4: #3db9ec
+
+header
+    @include padrao(1.5rem)
+    position: absolute
+    @include flex(center, space-around, row, 1rem)
+
+    h2
+        color: #999
+        font-size: 2rem
+        font-family: Linotte
+
+        span
+            font-weight: 900
+            color: #fa4a4d
+            padding: 0 .2rem
+    nav
+        ul
+            li
+                margin: 0 2rem
+                font-weight: 900
+                display: inline-block
+    div
+        a
+            color: #333
+            font-weight: 900
+            
+            margin: 0 0 0 1.5rem
+            
+            display: inline-block
+
+            i
+                color: #3c5063
+                font-size: 1.1rem
+                position: relative
+
+                span
+                    top: -7px
+                    right: -5px
+                    color: #fa4a4d
+                    font-size: .7rem
+                    font-style: normal
+                    position: absolute
+                    font-family: Linotte
+
+aside
+    height: 60vh
+    @include padrao(0)    
+    // background: #3db9ec
+
+    div
+        margin: 0 auto
+        @include flex(center, center, column)
+
+    .legenda
+        margin: 0 auto
+        text-align: center
+        @include padrao(10rem 0 1rem)
+
+        h1
+            color: #999
+            padding: .5rem 0
+            font-size: 2.1rem
+            font-family: Linotte
+        p
+            font-size: 1.6rem
+    
+    .form
+        width: 100%
+        display: block
+        padding: 1rem 0 0
+
+        p
+            text-align: center
+            padding: 0 21.5rem 0 0
+
+        div
+            width: 35%
+            padding: .4rem
+            position: relative
+            // box-shadow: 1px 0px 3px rgba(0, 0, 0, .3)
+            @include flex(center, space-between, row, .5rem)
+
+            i
+                left: 1rem
+                color: #3c5063
+                font-size: 1.3rem
+                position: absolute
+
+            input
+                width: 95%
+                height: 38px
+                outline: none
+                padding: 0.9rem 2rem
+
+            button
+                width: 100px
+                height: 39px
+                outline: none
+                border: none
+                color: #333
+                padding: .0rem
+                cursor: pointer
+                font-size: .8rem
+                border-radius: 5px
+                // font-family: Linotte
+                color: #fff
+                background: #3c5063
+
+
+
+
+
+    //     @include table
+    //       font-size: 1rem
+    // div
+    //     @include flex(center, space-around, row, 10px)
+
+
