@@ -57,7 +57,7 @@ root {
 
 header {
   width: 100%;
-  padding: 1.5rem;
+  padding: 1.8rem;
   position: absolute;
   display: flex;
   align-items: center;
@@ -78,16 +78,48 @@ header h2 span {
   padding: 0 .2rem;
 }
 
+@media (max-width: 768px) {
+  header nav {
+    top: 0px;
+    left: 0px;
+    width: 60%;
+    z-index: 1;
+    display: none;
+    height: 100vh;
+    padding: 2rem 3rem;
+    position: absolute;
+    background: #fa4a4d;
+  }
+  header nav ul li {
+    color: #fff;
+    display: block !important;
+    margin: 1rem 0 !important;
+  }
+}
+
 header nav ul li {
   margin: 0 2rem;
+  cursor: pointer;
   font-weight: 900;
   display: inline-block;
+}
+
+header nav ul li a {
+  color: #333;
+}
+
+header div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 2rem;
 }
 
 header div a {
   color: #333;
   font-weight: 900;
-  margin: 0 0 0 1.5rem;
   display: inline-block;
 }
 
@@ -107,10 +139,49 @@ header div a i span {
   font-family: Linotte;
 }
 
+header div i.toggle {
+  top: 3px;
+  right: 0px;
+  width: 20px;
+  padding: .1px;
+  display: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 8px;
+  background: #3c5063;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  header div i.toggle {
+    display: block;
+  }
+}
+
+header div i.toggle::before {
+  top: -8px;
+  left: 0px;
+  width: 20%;
+  content: "";
+  display: block;
+  padding: 2.5px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 8px;
+  background: #3c5063;
+}
+
 aside {
-  height: 60vh;
+  height: 500px;
   width: 100%;
   padding: 0;
+}
+
+@media (max-width: 768px) {
+  aside {
+    width: 100%;
+    padding: 1rem;
+  }
 }
 
 aside div {
@@ -140,19 +211,33 @@ aside .legenda p {
   font-size: 1.6rem;
 }
 
+@media (max-width: 768px) {
+  aside .legenda p {
+    font-size: 1.2rem;
+  }
+}
+
+aside .legenda span {
+  margin: 0 auto;
+}
+
+aside .legenda span a {
+  margin: 0 10px;
+  color: #fa4a4d;
+}
+
+aside .legenda span a i {
+  font-size: 1.2rem;
+}
+
 aside .form {
   width: 100%;
   display: block;
-  padding: 1rem 0 0;
-}
-
-aside .form p {
-  text-align: center;
-  padding: 0 21.5rem 0 0;
+  padding: 3rem 0;
 }
 
 aside .form div {
-  width: 35%;
+  width: 32%;
   padding: .4rem;
   position: relative;
   display: flex;
@@ -160,6 +245,23 @@ aside .form div {
   justify-content: space-between;
   flex-direction: row;
   gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  aside .form div {
+    width: 84%;
+  }
+}
+
+@media (max-width: 990px) {
+  aside .form div {
+    width: 48%;
+  }
+}
+
+aside .form div p {
+  top: -1rem;
+  position: absolute;
 }
 
 aside .form div i {
@@ -181,11 +283,97 @@ aside .form div button {
   height: 39px;
   outline: none;
   border: none;
-  color: #333;
+  color: #fff;
   padding: .0rem;
   cursor: pointer;
   font-size: .8rem;
   border-radius: 5px;
-  color: #fff;
   background: #3c5063;
+}
+
+article {
+  height: 100%;
+  background: #222332;
+  width: 100%;
+  padding: 6rem 8rem;
+}
+
+@media (max-width: 768px) {
+  article {
+    width: 100%;
+    padding: 6rem 4rem;
+  }
+}
+
+article div.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: 2rem;
+  gap: 0px;
+}
+
+article div.top h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-family: Linotte;
+}
+
+article div.top span {
+  color: #fff;
+  padding: .5rem;
+  background: #3c5063;
+}
+
+article div.bottom {
+  text-align: center;
+}
+
+article div.bottom span {
+  margin: 0 auto;
+}
+
+article div.bottom span a {
+  color: #fff;
+  margin: 0 10px;
+}
+
+article div.bottom span a i {
+  font-size: 1.4rem;
+}
+
+article ul {
+  padding: 3rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4rem;
+  grid-template-rows: repeat(5, 1fr);
+}
+
+@media (max-width: 768px) {
+  article ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+  }
+}
+
+@media (max-width: 577px) {
+  article ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem;
+  }
+}
+
+article ul li {
+  height: 150px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #3c5063;
+}
+
+.block {
+  display: block !important;
 }
